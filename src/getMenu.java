@@ -14,7 +14,7 @@ public class getMenu {
                 - separate the parameters with one space;
                 - enter 0 to exit.""");*/
         do {
-            System.out.println("\nEnter 'properties' for property info or 'numbers' to gather their properties:");
+            System.out.println("\nEnter 'properties' for property info, 'numbers' to gather their properties, or 'exit' to exit:");
             input = scanner.nextLine();
             if (input.equalsIgnoreCase("properties")) {
                 PropertyInfo.propInfo(scanner);
