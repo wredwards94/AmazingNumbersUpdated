@@ -26,6 +26,13 @@ public class PropertyInfo {
             case "PALINDROMIC" -> {
               System.out.println("\nPalindromic numbers are numbers that are symmetrical. For example: 17371 is a palindromic number. Single digits are also palindromic. Example: 5.");
             }
+            case "GAPFUL" -> {
+              System.out.println("Gapful numbers are numbers that contains at least 3 digits and is divisible by the concatenation of its first and last digit without a remainder.");
+              System.out.println("32 is a Gapful number, as 132 % 12 == 0. Another good example of a Gapful number is 7881, as 7881 % 71 == 0.");
+            }
+            case "SPY" -> {
+              System.out.println("Spy numbers are numbers that the sum of all digits is equal to the product of all digits. For example: 123. 1 + 2 + 3 = 6 & 1 * 2 * 3 = 6 so therefore 123 is a spy number");
+            }
           }
         }while (!input.equalsIgnoreCase("back"));
     }
