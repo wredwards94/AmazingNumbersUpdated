@@ -4,9 +4,8 @@ public class PropertyInfo {
     protected static void propInfo(Scanner scanner) {
         String input;
         do {
-            System.out.println("");
             System.out.println("Please enter a valid property for more information or 'back' for main menu:");
-          System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
             input = scanner.nextLine();
 
           switch(input.toUpperCase()) {
@@ -36,10 +35,10 @@ public class PropertyInfo {
             }
             case "SUNNY" -> {
                 System.out.println("\nSunny numbers are numbers that needed +1 added to them to make a perfect square. " + "" +
-                        "For example: 8 is a sunny numbers because you can add 1 to it to make 9 which is a perfect square.");
+                        "For example: 8 is a sunny number because you can add 1 to it to make 9 which is a perfect square.");
             }
             case "SQUARE" -> {
-                System.out.println("Square numbers are numbers that are perfect squares. " +
+                System.out.println("\nSquare numbers are numbers that are perfect squares. " +
                         "For example: 9 is a square number, since it equals 32 and can be written as 3×3.");
             }
           }
