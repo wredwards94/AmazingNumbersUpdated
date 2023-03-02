@@ -18,7 +18,7 @@ public class NumMenu {
 
         do {
             // loops until user enters a positive number or 0
-            System.out.print("\nEnter a request: ");
+            System.out.print("\nEnter a request or 'back' for main menu: ");
             parameters = scanner.nextLine();
 
             if(parameters.contains(" ")) {
@@ -34,7 +34,7 @@ public class NumMenu {
                     System.out.println("2 nums");
                 }
             } else if (!parameters.equalsIgnoreCase("back")) {
-                System.out.println("single num");
+                //System.out.println("single num");
                 SingleNum.singleNum(parameters);
             }
         } while (!parameters.equals("back")) ;

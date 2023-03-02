@@ -3,31 +3,55 @@ public class SingleNum {
         if (!num.contains(" ") && num.equals("exit") || Long.parseLong(num) < 0) {
             System.out.println("\nThe first parameter should be a natural number or zero.");
         } else if (!num.equals("0") && Long.parseLong(num) > 0) {
-            System.out.println("\nProperties of " + num);
-            /*determineEvenOrOdd(num);
-            determineBuzzNum(num);
-            determineDuckNum(num);
-            determinePalindromic(num);
-            determineGapful(num);
-            determineSpyNum(num);
-            determineSunnySquare(num);*/
+            System.out.println("\nProperties of " + num
+            + "\n\t\teven: " + isEven(num)
+            + "\n\t\todd: " + isOdd(num)
+            + "\n\t\tbuzz: " + isBuzz(num)
+            + "\n\t\tduck: " + isDuck(num)
+            + "\n\t\tpalindromic: " + isPalindromic(num)
+            + "\n\t\tgapful: " + isGapful(num)
+            + "\n\t\tspy: " + isSpy(num)
+            + "\n\t\tsunny: " + isSunny(num)
+            + "\n\t\tsquare: " + isSquare(num));
         }
     }
-
-    protected static boolean determineEvenOrOdd(String num) {
+    protected static boolean isEven(String num) {
         // method with only one parameter
-        long num1 = Long.parseLong(num);
-        boolean even = false;
-        boolean odd = false;
-        if (num1 % 2 == 0 && num1 >= 1) {
-            //System.out.println("This number is Even.");
-            even = true;
-            System.out.println("\t\teven: " + even);
-            System.out.println("\t\todd: " + odd);
-        } else if (num1 % 2 != 0 && num1 >= 1) {
-            //System.out.println("This number is Odd.");
-            odd = true;
-            System.out.println("\t\teven: " + even);
-            System.out.println("\t\todd: " + odd);
-        }
+        return (Long.parseLong(num) % 2 == 0);
+    }
+    protected static boolean isOdd(String num) {
+        return (Long.parseLong(num) % 2 != 0);
+    }
+
+    protected static boolean isBuzz(String num) {
+        return (Long.parseLong(num) % 7 == 0 || Long.parseLong(num) % 10 == 7);
+    }
+
+    protected static boolean isDuck(String num) {
+        return num.contains("0") && !num.startsWith("0");
+    }
+    protected static boolean isPalindromic(String num) {
+        String revString = new StringBuilder(num).reverse().toString();
+        return revString.equals(num);
+    }
+
+    protected static boolean isGapful(String num) {
+        return num.length() > 2 && Long.parseLong(num) % Long.parseLong(String.valueOf(num.charAt(0)) + num.charAt(num.length() - 1)) == 0;
+    }
+
+    protected static boolean isSpy(String num) {
+        long sumNum = 0;
+        long productNum = 1;
+        for (int i = 0; i < num.length(); i++) sumNum += Long.parseLong(String.valueOf(num.charAt(i)));
+        for (int j = 0; j < num.length(); j++) productNum *= Long.parseLong(String.valueOf(num.charAt(j)));
+        return sumNum == productNum;
+    }
+
+    protected static boolean isSunny(String num) {
+        return Math.sqrt(Long.parseLong(num) + 1) % 1 == 0;
+    }
+
+    protected static boolean isSquare(String num) {
+        return Math.sqrt(Long.parseLong(num)) % 1 ==0;
+    }
 }
