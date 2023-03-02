@@ -13,4 +13,21 @@ public class SingleNum {
             determineSunnySquare(num);*/
         }
     }
+
+    protected static boolean determineEvenOrOdd(String num) {
+        // method with only one parameter
+        long num1 = Long.parseLong(num);
+        boolean even = false;
+        boolean odd = false;
+        if (num1 % 2 == 0 && num1 >= 1) {
+            //System.out.println("This number is Even.");
+            even = true;
+            System.out.println("\t\teven: " + even);
+            System.out.println("\t\todd: " + odd);
+        } else if (num1 % 2 != 0 && num1 >= 1) {
+            //System.out.println("This number is Odd.");
+            odd = true;
+            System.out.println("\t\teven: " + even);
+            System.out.println("\t\todd: " + odd);
+        }
 }
