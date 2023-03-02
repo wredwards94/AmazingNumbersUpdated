@@ -35,6 +35,7 @@ public class NumMenu {
                 }
             } else if (!parameters.equalsIgnoreCase("back")) {
                 System.out.println("single num");
+                SingleNum.singleNum(parameters);
             }
         } while (!parameters.equals("back")) ;
     }
