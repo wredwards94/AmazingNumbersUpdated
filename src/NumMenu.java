@@ -34,7 +34,6 @@ public class NumMenu {
                     System.out.println("2 nums");
                 }
             } else if (!parameters.equalsIgnoreCase("back")) {
-                //System.out.println("single num");
                 SingleNum.singleNum(parameters);
             }
         } while (!parameters.equals("back")) ;
