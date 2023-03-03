@@ -52,6 +52,6 @@ public class SingleNum {
     }
 
     protected static boolean isSquare(String num) {
-        return Math.sqrt(Long.parseLong(num)) % 1 ==0;
+        return Math.sqrt(Long.parseLong(num)) % 1 == 0;
     }
 }
