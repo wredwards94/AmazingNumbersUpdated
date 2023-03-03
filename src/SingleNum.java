@@ -1,5 +1,5 @@
 public class SingleNum {
-    protected static void singleNum(String num) {
+    static void singleNum(String num) {
         if (!num.contains(" ") && num.equals("exit") || Long.parseLong(num) < 0) {
             System.out.println("\nThe first parameter should be a natural number or zero.");
         } else if (!num.equals("0") && Long.parseLong(num) > 0) {
@@ -15,31 +15,31 @@ public class SingleNum {
             + "\n\t\tsquare: " + isSquare(num));
         }
     }
-    protected static boolean isEven(String num) {
+    static boolean isEven(String num) {
         // method with only one parameter
         return (Long.parseLong(num) % 2 == 0);
     }
-    protected static boolean isOdd(String num) {
+    static boolean isOdd(String num) {
         return (Long.parseLong(num) % 2 != 0);
     }
 
-    protected static boolean isBuzz(String num) {
+    static boolean isBuzz(String num) {
         return (Long.parseLong(num) % 7 == 0 || Long.parseLong(num) % 10 == 7);
     }
 
-    protected static boolean isDuck(String num) {
+    static boolean isDuck(String num) {
         return num.contains("0") && !num.startsWith("0");
     }
-    protected static boolean isPalindromic(String num) {
+    static boolean isPalindromic(String num) {
         String revString = new StringBuilder(num).reverse().toString();
         return revString.equals(num);
     }
 
-    protected static boolean isGapful(String num) {
+    static boolean isGapful(String num) {
         return num.length() > 2 && Long.parseLong(num) % Long.parseLong(String.valueOf(num.charAt(0)) + num.charAt(num.length() - 1)) == 0;
     }
 
-    protected static boolean isSpy(String num) {
+    static boolean isSpy(String num) {
         long sumNum = 0;
         long productNum = 1;
         for (int i = 0; i < num.length(); i++) sumNum += Long.parseLong(String.valueOf(num.charAt(i)));
@@ -47,11 +47,11 @@ public class SingleNum {
         return sumNum == productNum;
     }
 
-    protected static boolean isSunny(String num) {
+    static boolean isSunny(String num) {
         return Math.sqrt(Long.parseLong(num) + 1) % 1 == 0;
     }
 
-    protected static boolean isSquare(String num) {
+    static boolean isSquare(String num) {
         return Math.sqrt(Long.parseLong(num)) % 1 == 0;
     }
 }
