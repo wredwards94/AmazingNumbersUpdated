@@ -30,8 +30,8 @@ public class NumMenu {
                     //TwoNumsAndProp(parameters);
                     System.out.println("2 nums 1 prop");
                 } else if (multiNums.length == 2) {
-                    //twoNums(parameters);
-                    System.out.println("2 nums");
+                    TwoNums.twoNums(parameters);
+
                 }
             } else if (!parameters.equalsIgnoreCase("back")) {
                 SingleNum.singleNum(parameters);
