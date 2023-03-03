@@ -19,7 +19,7 @@ public class NumsAndProps {
     static String determinePalindromic(String[] multiNums) {
         String revString = new StringBuilder(multiNums[0]).reverse().toString();
 
-        return revString.equals(multiNums[0]) ? "palindromic" : "";
+        return revString.equals(multiNums[0]) ? "palindromic, " : "";
     }
 
     static String determineGapful(String[] multiNums) {

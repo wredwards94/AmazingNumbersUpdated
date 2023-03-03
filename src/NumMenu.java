@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class NumMenu {
-    protected static void numMenu(Scanner scanner) {
+    static void numMenu(Scanner scanner) {
         String parameters;
         System.out.println("""
                 \nSupported requests:
