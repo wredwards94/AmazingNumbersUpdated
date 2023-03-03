@@ -48,10 +48,14 @@ public class NumsAndProps {
     }
 
     protected static String isSunny(String[] multiNums) {
-        return Math.sqrt(Long.parseLong(multiNums[0]) + 1) % 1 == 0;
+        if(Math.sqrt(Long.parseLong(multiNums[0]) + 1) % 1 == 0) {
+            return "sunny, ";
+        }
     }
 
     protected static String isSquare(String[] multiNums) {
-        return Math.sqrt(Long.parseLong(multiNums[0])) % 1 ==0;
+        if(Math.sqrt(Long.parseLong(multiNums[0])) % 1 == 0;) {
+            return "square, ";
+        }
     }
 }
