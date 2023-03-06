@@ -63,7 +63,7 @@ public class TwoNumsOneProp {
             }
             case "DUCK" -> {
                 while (counter < Long.parseLong(multiNums[1])) {
-                    if (multiNums[0].contains("0")) {
+                    if (multiNums[0].contains("0") && !multiNums[0].startsWith("0")) {
                         System.out.print("\n" + multiNums[0] + " is ");
                         System.out.print(NumsAndProps.determineDuck(multiNums));
                         System.out.print(NumsAndProps.determineEven(multiNums));
@@ -82,9 +82,8 @@ public class TwoNumsOneProp {
             }
             case "PALINDROMIC" -> {
                 while (counter < Long.parseLong(multiNums[1])) {
-                    String numString = multiNums[0];
-                    String revString = new StringBuilder(numString).reverse().toString();
-                    if (numString.equals(revString)) {
+                    String revString = new StringBuilder(multiNums[0]).reverse().toString();
+                    if (revString.equals(multiNums[0])) {
                         System.out.print("\n" + multiNums[0] + " is ");
                         System.out.print(NumsAndProps.determinePalindromic(multiNums));
                         System.out.print(NumsAndProps.determineEven(multiNums));
@@ -125,12 +124,10 @@ public class TwoNumsOneProp {
                 long sumNum = 0;
                 long productNum = 1;
                 while (counter < Long.parseLong(multiNums[1])) {
-                    for (int i = 0; i < multiNums[0].length(); i++) {
-                        sumNum += Long.parseLong(String.valueOf(multiNums[0].charAt(i)));
-                    }
-                    for (int j = 0; j < multiNums[0].length(); j++) {
-                        productNum *= Long.parseLong(String.valueOf(multiNums[0].charAt(j)));
-                    }
+
+                    for (int i = 0; i < multiNums[0].length(); i++) sumNum += Long.parseLong(String.valueOf(multiNums[0].charAt(i)));
+                    for (int j = 0; j < multiNums[0].length(); j++) productNum *= Long.parseLong(String.valueOf(multiNums[0].charAt(j)));
+
                     if (sumNum == productNum) {
                         System.out.print("\n" + multiNums[0] + " is ");
                         System.out.print(NumsAndProps.determineSpy(multiNums));
@@ -152,8 +149,7 @@ public class TwoNumsOneProp {
             }
             case "SQUARE" -> {
                 while (counter < Long.parseLong(multiNums[1])) {
-                    double num1 = (double) Long.parseLong(multiNums[0]);
-                    if (Math.sqrt(num1) % 1 == 0) {
+                    if (Math.sqrt(Long.parseLong(multiNums[0])) % 1 == 0) {
                         System.out.print("\n" + multiNums[0] + " is ");
                         System.out.print(NumsAndProps.determineSquare(multiNums));
                         System.out.print(NumsAndProps.determineEven(multiNums));
@@ -172,8 +168,7 @@ public class TwoNumsOneProp {
             }
             case "SUNNY" -> {
                 while (counter < Long.parseLong(multiNums[1])) {
-                    double num1 = (double) Long.parseLong(multiNums[0]);
-                    if (Math.sqrt(num1 + 1) % 1 == 0) {
+                    if (Math.sqrt(Long.parseLong(multiNums[0] + 1)) % 1 == 0) {
                         System.out.print("\n" + multiNums[0] + " is ");
                         System.out.print(NumsAndProps.determineSunny(multiNums));
                         System.out.print(NumsAndProps.determineEven(multiNums));
