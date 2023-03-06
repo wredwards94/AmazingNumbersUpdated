@@ -42,4 +42,54 @@ public class NumsAndProps {
     static String determineSquare(String[] multiNums) {
         return (Math.sqrt(Long.parseLong(multiNums[0])) % 1 == 0) ? "square, " : "";
     }
+
+    static void stringCompare(String num) {
+        String[] twoProps = num.split(" ");
+
+        if(!twoProps[2].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[2].equalsIgnoreCase(Properties.ODD.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[2].equalsIgnoreCase(Properties.DUCK.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.PALINDROMIC.properties) && !twoProps[2].equalsIgnoreCase(Properties.GAPFUL.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[2].equalsIgnoreCase(Properties.SQUARE.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.SUNNY.properties)
+                && !twoProps[3].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[3].equalsIgnoreCase(Properties.ODD.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[3].equalsIgnoreCase(Properties.DUCK.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.PALINDROMIC.properties) && !twoProps[3].equalsIgnoreCase(Properties.GAPFUL.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[3].equalsIgnoreCase(Properties.SQUARE.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.SUNNY.properties)) {
+            System.out.println("\nThe properties [" + twoProps[2].toUpperCase() +", " + twoProps[3].toUpperCase() + "] are wrong.");
+            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+        } else if (!twoProps[2].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[2].equalsIgnoreCase(Properties.ODD.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[2].equalsIgnoreCase(Properties.DUCK.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.PALINDROMIC.properties) && !twoProps[2].equalsIgnoreCase(Properties.GAPFUL.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[2].equalsIgnoreCase(Properties.SQUARE.properties) &&
+                !twoProps[2].equalsIgnoreCase(Properties.SUNNY.properties)) {
+            System.out.println("\nThe property [" + twoProps[2].toUpperCase() + "] is wrong.");
+            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+        } else if (!twoProps[3].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[3].equalsIgnoreCase(Properties.ODD.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[3].equalsIgnoreCase(Properties.DUCK.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.PALINDROMIC.properties) && !twoProps[3].equalsIgnoreCase(Properties.GAPFUL.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[3].equalsIgnoreCase(Properties.SQUARE.properties) &&
+                !twoProps[3].equalsIgnoreCase(Properties.SUNNY.properties)){
+            System.out.println("\nThe property [" + twoProps[3].toUpperCase() + "] is wrong.");
+            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+        } else {
+            mutuallyExclusive(twoProps[2], twoProps[3]);
+        }
+    }
+
+    static void mutuallyExclusive(String first, String second) {
+        String masterKey = first.toUpperCase() + second.toUpperCase();
+
+        if (masterKey.contains("EVEN") && masterKey.contains("ODD")) {
+            System.out.println("\nThe request contains mutually exclusive properties: [" + first.toUpperCase() + ", " +
+                    second.toUpperCase() + "]\n" + "There are no numbers with these properties.");
+        } else if (masterKey.contains("DUCK") && masterKey.contains("SPY")) {
+            System.out.println("\nThe request contains mutually exclusive properties: [" + first.toUpperCase() + ", " +
+                    second.toUpperCase() + "]\n" + "There are no numbers with these properties.");
+        } else if (masterKey.contains("SUNNY") && masterKey.contains("SQUARE")) {
+            System.out.println("\nThe request contains mutually exclusive properties: [" + first.toUpperCase() + ", " +
+                    second.toUpperCase() + "]\n" + "There are no numbers with these properties.");
+        }
+    }
+
 }
