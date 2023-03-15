@@ -43,8 +43,25 @@ public class NumsAndProps {
         return (Math.sqrt(Long.parseLong(multiNums[0])) % 1 == 0) ? "square, " : "";
     }
 
-    static void stringCompare(String num) {
-        String[] twoProps = num.split(" ");
+    static String determineJumping (String[] multiNums) {
+        String jumpingNum = "";
+        int i = 0;
+        int j = 1;
+        while (j <= multiNums[0].length() - 1) {
+            if (Math.abs(Long.parseLong(String.valueOf(multiNums[0].charAt(i) -
+                    multiNums[0].charAt(j)))) == 1) {
+                jumpingNum = "jumping, ";
+                i++;
+                j++;
+            } else {
+                jumpingNum = "";
+                break;
+            }
+        }
+        return jumpingNum;
+    }
+
+    static void stringCompare(String[] twoProps) {
 
         if(!twoProps[2].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[2].equalsIgnoreCase(Properties.ODD.properties) &&
                 !twoProps[2].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[2].equalsIgnoreCase(Properties.DUCK.properties) &&
@@ -57,21 +74,21 @@ public class NumsAndProps {
                 !twoProps[3].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[3].equalsIgnoreCase(Properties.SQUARE.properties) &&
                 !twoProps[3].equalsIgnoreCase(Properties.SUNNY.properties)) {
             System.out.println("\nThe properties [" + twoProps[2].toUpperCase() +", " + twoProps[3].toUpperCase() + "] are wrong.");
-            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+            System.out.println("Available properties: [BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, JUMPING, EVEN, ODD]");
         } else if (!twoProps[2].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[2].equalsIgnoreCase(Properties.ODD.properties) &&
                 !twoProps[2].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[2].equalsIgnoreCase(Properties.DUCK.properties) &&
                 !twoProps[2].equalsIgnoreCase(Properties.PALINDROMIC.properties) && !twoProps[2].equalsIgnoreCase(Properties.GAPFUL.properties) &&
                 !twoProps[2].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[2].equalsIgnoreCase(Properties.SQUARE.properties) &&
                 !twoProps[2].equalsIgnoreCase(Properties.SUNNY.properties)) {
             System.out.println("\nThe property [" + twoProps[2].toUpperCase() + "] is wrong.");
-            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+            System.out.println("Available properties: [BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, JUMPING, EVEN, ODD]");
         } else if (!twoProps[3].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[3].equalsIgnoreCase(Properties.ODD.properties) &&
                 !twoProps[3].equalsIgnoreCase(Properties.BUZZ.properties) && !twoProps[3].equalsIgnoreCase(Properties.DUCK.properties) &&
                 !twoProps[3].equalsIgnoreCase(Properties.PALINDROMIC.properties) && !twoProps[3].equalsIgnoreCase(Properties.GAPFUL.properties) &&
                 !twoProps[3].equalsIgnoreCase(Properties.SPY.properties) && !twoProps[3].equalsIgnoreCase(Properties.SQUARE.properties) &&
                 !twoProps[3].equalsIgnoreCase(Properties.SUNNY.properties)){
             System.out.println("\nThe property [" + twoProps[3].toUpperCase() + "] is wrong.");
-            System.out.println("Available properties: [EVEN, ODD, BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY]");
+            System.out.println("Available properties: [BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, JUMPING, EVEN, ODD]");
         } else {
             mutuallyExclusive(twoProps[2], twoProps[3]);
         }

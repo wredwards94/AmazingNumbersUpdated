@@ -7,7 +7,8 @@ public enum Properties {
     GAPFUL("gapful"),
     SPY("spy"),
     SUNNY("sunny"),
-    SQUARE("square");
+    SQUARE("square"),
+    JUMPING("jumping");
 
     String properties;
 

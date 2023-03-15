@@ -1,6 +1,6 @@
 public class TwoNums {
-    static void twoNums(String parameters) {
-        String[] multiNums = parameters.split(" ");
+    static void twoNums(String[] multiNums) {
+        //String[] multiNums = parameters.split(" ");
         if (multiNums[0].equals("exit") || Long.parseLong(multiNums[0]) < 0) {
             System.out.println("\nThe first parameter should be a natural number or zero.");
         } else if (multiNums[1].equals("exit") || Long.parseLong(multiNums[1]) <= 0) {
@@ -17,6 +17,7 @@ public class TwoNums {
                 System.out.print(NumsAndProps.determineSpy(multiNums));
                 System.out.print(NumsAndProps.determineSunny(multiNums));
                 System.out.print(NumsAndProps.determineSquare(multiNums));
+                System.out.print(NumsAndProps.determineJumping(multiNums));
                 multiNums[0] = String.valueOf(Long.parseLong(multiNums[0])+ 1);
             }
             System.out.println();

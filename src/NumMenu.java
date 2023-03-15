@@ -25,11 +25,11 @@ public class NumMenu extends NumberFormatException{
                 if(parameters.contains(" ")) {
                     String[] multiNums = parameters.split(" ");
                     if (multiNums.length == 4) {
-                        TwoNumsTwoProps.twoNumsTwoProps(parameters);
+                        TwoNumsTwoProps.twoNumsTwoProps(multiNums);
                     } else if (multiNums.length == 3) {
-                        TwoNumsOneProp.twoNumsOneProp(parameters);
+                        TwoNumsOneProp.twoNumsOneProp(multiNums);
                     } else if (multiNums.length == 2) {
-                        TwoNums.twoNums(parameters);
+                        TwoNums.twoNums(multiNums);
                     }
                 } else if (!parameters.equalsIgnoreCase("back")) {
                     SingleNum.singleNum(parameters);
