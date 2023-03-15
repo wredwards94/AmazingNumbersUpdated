@@ -75,9 +75,9 @@ public class TwoNumsTwoProps {
                         sumNum = 0;
                         productNum = 1;
 
-                        for (int i = 0; i < num.length(); i++)
+                        for (int i = 0; i < twoProps[0].length(); i++)
                             sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                        for (int j = 0; j < num.length(); j++)
+                        for (int j = 0; j < twoProps[0].length(); j++)
                             productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                         if (sumNum == productNum) {
@@ -197,9 +197,9 @@ public class TwoNumsTwoProps {
                         sumNum = 0;
                         productNum = 1;
 
-                        for (int i = 0; i < num.length(); i++)
+                        for (int i = 0; i < twoProps[0].length(); i++)
                             sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                        for (int j = 0; j < num.length(); j++)
+                        for (int j = 0; j < twoProps[0].length(); j++)
                             productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                         if (sumNum == productNum) {
@@ -326,9 +326,9 @@ public class TwoNumsTwoProps {
                         sumNum = 0;
                         productNum = 1;
 
-                        for (int i = 0; i < num.length(); i++)
+                        for (int i = 0; i < twoProps[0].length(); i++)
                             sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                        for (int j = 0; j < num.length(); j++)
+                        for (int j = 0; j < twoProps[0].length(); j++)
                             productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                         if (sumNum == productNum) {
@@ -543,9 +543,9 @@ public class TwoNumsTwoProps {
                             sumNum = 0;
                             productNum = 1;
 
-                            for (int i = 0; i < num.length(); i++)
+                            for (int i = 0; i < twoProps[0].length(); i++)
                                 sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                            for (int j = 0; j < num.length(); j++)
+                            for (int j = 0; j < twoProps[0].length(); j++)
                                 productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                             if (sumNum == productNum) {
@@ -644,9 +644,9 @@ public class TwoNumsTwoProps {
                             sumNum = 0;
                             productNum = 1;
 
-                            for (int i = 0; i < num.length(); i++)
+                            for (int i = 0; i < twoProps[0].length(); i++)
                                 sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                            for (int j = 0; j < num.length(); j++)
+                            for (int j = 0; j < twoProps[0].length(); j++)
                                 productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                             if (sumNum == productNum) {
@@ -709,9 +709,9 @@ public class TwoNumsTwoProps {
                 sumNum = 0;
                 productNum = 1;
                 while (counter < Long.parseLong(twoProps[1])) {
-                    for (int i = 0; i < num.length(); i++)
+                    for (int i = 0; i < twoProps[0].length(); i++)
                         sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                    for (int j = 0; j < num.length(); j++)
+                    for (int j = 0; j < twoProps[0].length(); j++)
                         productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                     if (sumNum == productNum) {
@@ -836,9 +836,9 @@ public class TwoNumsTwoProps {
                             sumNum = 0;
                             productNum = 1;
 
-                            for (int i = 0; i < num.length(); i++)
+                            for (int i = 0; i < twoProps[0].length(); i++)
                                 sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                            for (int j = 0; j < num.length(); j++)
+                            for (int j = 0; j < twoProps[0].length(); j++)
                                 productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                             if (sumNum == productNum) {
@@ -946,9 +946,9 @@ public class TwoNumsTwoProps {
                             sumNum = 0;
                             productNum = 1;
 
-                            for (int i = 0; i < num.length(); i++)
+                            for (int i = 0; i < twoProps[0].length(); i++)
                                 sumNum += Long.parseLong(String.valueOf(twoProps[0].charAt(i)));
-                            for (int j = 0; j < num.length(); j++)
+                            for (int j = 0; j < twoProps[0].length(); j++)
                                 productNum *= Long.parseLong(String.valueOf(twoProps[0].charAt(j)));
 
                             if (sumNum == productNum) {
