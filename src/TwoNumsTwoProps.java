@@ -418,6 +418,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineBuzz(twoProps));
                         System.out.print(NumsAndProps.determineDuck(twoProps));
                         System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
@@ -429,6 +430,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineBuzz(twoProps));
                         System.out.print(NumsAndProps.determineDuck(twoProps));
                         System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
@@ -441,6 +443,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineOdd(twoProps));
                         System.out.print(NumsAndProps.determineBuzz(twoProps));
                         System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
@@ -453,6 +456,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineEven(twoProps));
                         System.out.print(NumsAndProps.determineOdd(twoProps));
                         System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
@@ -465,6 +469,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineOdd(twoProps));
                         System.out.print(NumsAndProps.determineBuzz(twoProps));
                         System.out.print(NumsAndProps.determineDuck(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
@@ -478,6 +483,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineBuzz(twoProps));
                         System.out.print(NumsAndProps.determineDuck(twoProps));
                         System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
                         NumMenu.COUNTER++;
@@ -491,6 +497,7 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineBuzz(twoProps));
                         System.out.print(NumsAndProps.determineDuck(twoProps));
                         System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
 
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
@@ -645,6 +652,18 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineSquare(twoProps));
                         twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
                         NumMenu.COUNTER++;
+                    } else if (SingleNum.isSpy(twoProps[0]) && SingleNum.isBuzz(twoProps[0]) && twoProps[3].equalsIgnoreCase(Properties.BUZZ.properties)) {
+                        System.out.print("\n" + twoProps[0] + " is ");
+                        System.out.print(NumsAndProps.determineSpy(twoProps));
+                        System.out.print(NumsAndProps.determineBuzz(twoProps));
+                        System.out.print(NumsAndProps.determineEven(twoProps));
+                        System.out.print(NumsAndProps.determineOdd(twoProps));
+                        System.out.print(NumsAndProps.determinePalindromic(twoProps));
+                        System.out.print(NumsAndProps.determineGapful(twoProps));
+                        System.out.print(NumsAndProps.determineSunny(twoProps));
+                        System.out.print(NumsAndProps.determineSquare(twoProps));
+                        twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
+                        NumMenu.COUNTER++;
                     } else if (SingleNum.isSpy(twoProps[0]) && SingleNum.isPalindromic(twoProps[0]) && twoProps[3].equalsIgnoreCase(Properties.PALINDROMIC.properties)) {
                         System.out.print("\n" + twoProps[0] + " is ");
                         System.out.print(NumsAndProps.determineSpy(twoProps));
@@ -655,7 +674,6 @@ public class TwoNumsTwoProps {
                         System.out.print(NumsAndProps.determineGapful(twoProps));
                         System.out.print(NumsAndProps.determineSunny(twoProps));
                         System.out.print(NumsAndProps.determineSquare(twoProps));
-                        twoProps[0] = String.valueOf(Long.parseLong(twoProps[0]) + 1);
                         NumMenu.COUNTER++;
                     } else if (SingleNum.isSpy(twoProps[0]) && SingleNum.isGapful(twoProps[0]) && twoProps[3].equalsIgnoreCase(Properties.GAPFUL.properties)) {
                         System.out.print("\n" + twoProps[0] + " is ");
