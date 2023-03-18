@@ -43,24 +43,6 @@ public class NumsAndProps {
         return (Math.sqrt(Long.parseLong(multiNums[0])) % 1 == 0) ? "square, " : "";
     }
 
-    static String determineJumping (String[] multiNums) {
-        String jumpingNum = "";
-        int i = 0;
-        int j = 1;
-        while (j <= multiNums[0].length() - 1) {
-            if (Math.abs(Long.parseLong(String.valueOf(multiNums[0].charAt(i) -
-                    multiNums[0].charAt(j)))) == 1) {
-                jumpingNum = "jumping, ";
-                i++;
-                j++;
-            } else {
-                jumpingNum = "";
-                break;
-            }
-        }
-        return jumpingNum;
-    }
-
     static void stringCompare(String[] twoProps) {
 
         if(!twoProps[2].equalsIgnoreCase(Properties.EVEN.properties) && !twoProps[2].equalsIgnoreCase(Properties.ODD.properties) &&

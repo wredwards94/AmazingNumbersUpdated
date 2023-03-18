@@ -12,8 +12,7 @@ public class SingleNum {
                     + "\n\t\tgapful: " + isGapful(num)
                     + "\n\t\tspy: " + isSpy(num)
                     + "\n\t\tsunny: " + isSunny(num)
-                    + "\n\t\tsquare: " + isSquare(num)
-                    + "\n\t\tjumping: " + isJumping(num));
+                    + "\n\t\tsquare: " + isSquare(num));
         }
     }
     static boolean isEven(String num) {
@@ -54,22 +53,5 @@ public class SingleNum {
 
     static boolean isSquare(String num) {
         return Math.sqrt(Long.parseLong(num)) % 1 == 0;
-    }
-
-    static boolean isJumping(String num) {
-        int i = 0;
-        int j = 1;
-        boolean jumpingNum = false;
-        while (j <= num.length() - 1) {
-            if (Math.abs(Long.parseLong(String.valueOf(num.charAt(i) - num.charAt(j)))) == 1) {
-                jumpingNum = true;
-                i++;
-                j++;
-            } else {
-                jumpingNum = false;
-                break;
-            }
-        }
-        return jumpingNum;
     }
 }

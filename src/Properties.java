@@ -7,10 +7,9 @@ public enum Properties {
     GAPFUL("gapful"),
     SPY("spy"),
     SUNNY("sunny"),
-    SQUARE("square"),
-    JUMPING("jumping");
+    SQUARE("square");
 
-    String properties;
+    final String properties;
 
     Properties(String properties) {
         this.properties = properties;

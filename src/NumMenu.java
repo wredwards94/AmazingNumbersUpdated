@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class NumMenu extends NumberFormatException{
+    public static int COUNTER;
     static void numMenu(Scanner scanner) {
         String parameters = "";
         System.out.println("""
