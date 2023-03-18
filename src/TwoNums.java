@@ -17,7 +17,6 @@ public class TwoNums {
                 System.out.print(NumsAndProps.determineSpy(multiNums));
                 System.out.print(NumsAndProps.determineSunny(multiNums));
                 System.out.print(NumsAndProps.determineSquare(multiNums));
-                System.out.print(NumsAndProps.determineJumping(multiNums));
                 multiNums[0] = String.valueOf(Long.parseLong(multiNums[0])+ 1);
             }
             System.out.println();
