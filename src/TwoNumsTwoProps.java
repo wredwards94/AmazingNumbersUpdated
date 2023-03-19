@@ -2,7 +2,12 @@ public class TwoNumsTwoProps {
     static void twoNumsTwoProps(String[] twoProps) {
         NumMenu.COUNTER = 0;
 
-        switch (twoProps[2].toUpperCase()){
+        if (!twoProps[0].contains(" ")  || Long.parseLong(twoProps[0]) < 0) {
+            System.out.println("\nThe first parameter should be a natural number or zero.");
+        } else if (Long.parseLong(twoProps[0]) <= 0) {
+            System.out.println("\nThe second parameter should be a natural number.");
+        } else {
+            switch (twoProps[2].toUpperCase()){
             case "EVEN" -> {
                 while (NumMenu.COUNTER < Long.parseLong(twoProps[1])) {
                     if (SingleNum.isEven(twoProps[0]) && SingleNum.isBuzz(twoProps[0]) && twoProps[3].equalsIgnoreCase(Properties.BUZZ.properties)) {
@@ -915,5 +920,7 @@ public class TwoNumsTwoProps {
             }
             default -> NumsAndProps.stringCompare(twoProps);
         }
+        }
+
     }
 }

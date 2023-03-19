@@ -1,6 +1,6 @@
 public class SingleNum {
     static void singleNum(String num) {
-        if (!num.contains(" ") && num.equals("exit") || Long.parseLong(num) < 0) {
+        if (!num.contains(" ") || Long.parseLong(num) < 0) {
             System.out.println("\nThe first parameter should be a natural number or zero.");
         } else if (!num.equals("0") && Long.parseLong(num) > 0) {
             System.out.println("\nProperties of " + num

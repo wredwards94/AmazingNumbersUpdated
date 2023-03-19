@@ -2,7 +2,12 @@ public class TwoNumsOneProp {
     static void twoNumsOneProp(String[] oneProp) {
         NumMenu.COUNTER = 0;
 
-        switch (oneProp[2].toUpperCase()) {
+        if (!oneProp[0].contains(" ") || Long.parseLong(oneProp[0]) < 0) {
+            System.out.println("\nThe first parameter should be a natural number or zero.");
+        } else if (Long.parseLong(oneProp[1]) <= 0) {
+            System.out.println("\nThe second parameter should be a natural number.");
+        } else {
+            switch (oneProp[2].toUpperCase()) {
             case "EVEN" -> {
                 while (NumMenu.COUNTER < Long.parseLong(oneProp[1])) {
                     if (SingleNum.isEven(oneProp[0])) {
@@ -178,5 +183,7 @@ public class TwoNumsOneProp {
                 System.out.println("Available properties: [BUZZ, DUCK, PALINDROMIC, GAPFUL, SPY, SQUARE, SUNNY, EVEN, ODD]");
             }
         }
+        }
+
     }
 }
