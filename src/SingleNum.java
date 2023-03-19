@@ -2,7 +2,7 @@ public class SingleNum {
     static void singleNum(String num) {
         if (!num.contains(" ") || Long.parseLong(num) < 0) {
             System.out.println("\nThe first parameter should be a natural number or zero.");
-        } else if (!num.equals("0") && Long.parseLong(num) > 0) {
+        } else if (Long.parseLong(num) > 0) {
             System.out.println("\nProperties of " + num
                     + "\n\t\teven: " + isEven(num)
                     + "\n\t\todd: " + isOdd(num)
