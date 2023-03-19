@@ -18,7 +18,6 @@ public class NumMenu extends NumberFormatException{
                 - enter back for main menu.""");
 
         do {
-            // loops until user enters a positive number or 0
             try {
                 System.out.print("\nEnter a request or 'back' for main menu: ");
                 parameters = scanner.nextLine();
