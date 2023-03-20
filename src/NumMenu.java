@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NumMenu extends NumberFormatException{
+public class NumMenu{
     public static int COUNTER;
     static void numMenu(Scanner scanner) {
         String parameters = "";
@@ -34,7 +34,7 @@ public class NumMenu extends NumberFormatException{
                 } else if (!parameters.equalsIgnoreCase("back")) {
                     SingleNum.singleNum(parameters);
                 }
-            }catch (Exception e) {
+            }catch (NumberFormatException e) {
                 System.out.println("\nPlease enter parameters in the correct format: '45', '34 6', '34 5 even', or '456 4 spy duck' ");
             }
         } while (!parameters.equals("back"));

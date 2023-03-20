@@ -2,8 +2,8 @@ public class TwoNumsOneProp {
     static void twoNumsOneProp(String[] oneProp) {
         NumMenu.COUNTER = 0;
 
-        if (!oneProp[0].contains(" ") || Long.parseLong(oneProp[0]) < 0) {
-            System.out.println("\nThe first parameter should be a natural number or zero.");
+        if (Long.parseLong(oneProp[0]) < 0) {
+            System.out.println("\nThe first parameter should be a natural number.");
         } else if (Long.parseLong(oneProp[1]) <= 0) {
             System.out.println("\nThe second parameter should be a natural number.");
         } else {

@@ -1,8 +1,7 @@
 public class TwoNums {
     static void twoNums(String[] multiNums) {
-        //String[] multiNums = parameters.split(" ");
         if (Long.parseLong(multiNums[0]) < 0) {
-            System.out.println("\nThe first parameter should be a natural number or zero.");
+            System.out.println("\nThe first parameter should be a natural number.");
         } else if (Long.parseLong(multiNums[1]) <= 0) {
             System.out.println("\nThe second parameter should be a natural number.");
         } else if (!multiNums[0].equals("exit") || Long.parseLong(multiNums[0]) > 0) {

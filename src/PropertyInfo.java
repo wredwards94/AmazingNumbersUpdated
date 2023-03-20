@@ -28,6 +28,6 @@ public class PropertyInfo {
             case "SQUARE" -> System.out.println("\nSquare numbers are numbers that are perfect squares. " +
                         "For example: 9 is a square number, since it equals 32 and can be written as 3×3.");
           }
-        }while (!input.equalsIgnoreCase("back"));
+        } while (!input.equalsIgnoreCase("back"));
     }
 }
